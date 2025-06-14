@@ -13,7 +13,7 @@ from sklearn.compose import ColumnTransformer
 # -----------------------------------------------------
 # Ganti path ini sesuai file model kamu
 MODEL_PATH = 'DevaAnanda/Bengkel-Koding/stramlitUAS/best_rf_model.pkl'
-/workspaces/Bengkel-Koding/stramlitUAS/best_rf_model.pkl
+
 with open(MODEL_PATH, 'rb') as file:
     model = pickle.load(file)
 
