@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
-# Load model
-model = joblib.load("randomforest_obesity_model.pkl")
+if not os.path.exists("randomforest_obesity_model.pkl"):
+    st.error("Model belum ditemukan! Pastikan file .pkl tersedia.")
+else:
+    model = joblib.load("randomforest_obesity_model.pkl")
 
 st.title("🩺 Prediksi Tipe Obesitas")
 st.write("Masukkan data gaya hidup kamu di bawah ini:")
